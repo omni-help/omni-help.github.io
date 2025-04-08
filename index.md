@@ -9,9 +9,7 @@ Walkthrough of how to setup your new Omni app on Apple TV. If you have not purch
 
 ### **Getting Started**
 
-Let's get started and walkthrough the first steps to take.<br>
-TODO somewhere we should talk about the sidebar<br>
-TODO somewhere we should talk about the settings tab and what's in it
+Let's get started and walkthrough the first steps to take.
 
 <details open markdown="1" id="how-to-install">
 <summary><strong>How to Install</strong></summary>
@@ -23,8 +21,7 @@ Installing the app should be very easy. Once you make the purchase on the app st
 <details markdown="1" id="how-to-setup">
 <summary><strong>How to Setup</strong></summary>
 
-TODO basic user setup with public domain media?<br>
-TODO link to advanced section at the end to go over (1) advanced setup and (2) advanced configuration?<br>
+TODO needs improvement
 
 </details>
 
@@ -68,16 +65,11 @@ Provides a list of watchable content within Omni. There are 4 ways to display th
 3. **Enable** the catalog to appear on the home screen (separate from the hero section).
 4. **Create** a ["group"](#groups) that will add multiple catalogs to a shelf on the home screen.
 
-TODO screenshots of each way catalogs appear<br>
-TODO screenshots of how to do each state<br>
-TODO list of addons that provide catalog information<br>
-
 </details>
 
 ### **Advanced**
 
-Advanced setup features for power users.<br>
-TODO list out all the "advanced" features
+Advanced setup features for power users.
 
 <details markdown="1" id="groups">
 <summary><strong>Groups</strong></summary>
@@ -95,9 +87,7 @@ Here is an example of a shelf that consist of streaming services. Let's create o
 <details markdown="1">
 <summary><strong>Regex</strong></summary>
 
-TODO describe how this is useful<br>
-TODO examples of regex filters<br>
-TODO screenshots
+TODO needs improvement
 
 </details>
 
@@ -125,30 +115,54 @@ Need assistance? Join the [Omni Discord](https://discord.gg/YeWQuQSg8k) for disc
 
 #### **Reddit**
 
-Ask questions on Reddit. Share your setups on Reddit. Discuss anything about Omni -- Content Hub on Reddit here: https://www.reddit.com/r/OmniContentHub/
+Ask questions on Reddit. Share your setups on Reddit. Discuss anything about [Omni - Content Hub on Reddit](https://www.reddit.com/r/OmniContentHub/).
+
+
+##### List of TODOs for this page
+- [ ] Add screenshots
+- [ ] somewhere we should talk about the sidebar and what's in it
+- [ ] somewhere we should talk about the settings tab and what's in it
+- [ ] basic user setup with public domain media?
+- [ ] link to advanced section at the end to go over (1) advanced setup and (2) advanced configuration?
+- [ ] link to addons section to go over what addons are and what they do
+- [ ] screenshots of each way catalogs appear on the home screen
+- [ ] list of addons that provide catalog information
+- [ ] list out all the "advanced" features
+- [ ] regex section
+- [ ] settings section
 
 <script>
 // Function to open details element when its ID is targeted in the URL
-document.addEventListener('DOMContentLoaded', function() {
+function openTargetedDetails() {
   // Get the hash from the URL (without the # symbol)
   const hash = window.location.hash.substring(1);
   
   // If there's a hash and it matches an element ID
   if (hash) {
-    // Find the details element with that ID
-    const targetDetails = document.getElementById(hash);
+    // Find the element with that ID
+    const targetElement = document.getElementById(hash);
     
-    // If it's a details element, open it
-    if (targetDetails && targetDetails.tagName.toLowerCase() === 'details') {
-      targetDetails.setAttribute('open', 'true');
-    }
-    // If it's inside a details element, find and open the parent details
-    else {
-      const parentDetails = targetDetails?.closest('details');
-      if (parentDetails) {
-        parentDetails.setAttribute('open', 'true');
+    if (targetElement) {
+      // If it's a details element, open it
+      if (targetElement.tagName.toLowerCase() === 'details') {
+        targetElement.setAttribute('open', 'true');
+      }
+      // If it's inside a details element, find and open the parent details
+      else {
+        const parentDetails = targetElement.closest('details');
+        if (parentDetails) {
+          parentDetails.setAttribute('open', 'true');
+          // Ensure the element is visible by scrolling to it
+          targetElement.scrollIntoView();
+        }
       }
     }
   }
-});
+}
+
+// Run when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', openTargetedDetails);
+
+// Also run when the hash changes (user clicks an anchor link)
+window.addEventListener('hashchange', openTargetedDetails);
 </script>
