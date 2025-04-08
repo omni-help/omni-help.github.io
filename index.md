@@ -9,27 +9,27 @@ Walkthrough of how to setup your new Omni app on Apple TV. If you have not purch
 
 ### **Getting Started**
 
-Let's get started and walkthrough the first steps to take.
-TODO somewhere we should talk about the sidebar
+Let's get started and walkthrough the first steps to take.<br>
+TODO somewhere we should talk about the sidebar<br>
 TODO somewhere we should talk about the settings tab and what's in it
 
-<details open markdown="1">
-<summary>
-
-#### How to Install
-
-</summary>
+<details open markdown="1" id="how-to-install">
+<summary><strong>How to Install</strong></summary>
 
 Installing the app should be very easy. Once you make the purchase on the app store, you install it like any other app from the app store. However, without addons, Omni does not offer much functionality. To unleash the power of the app you need to configure addons that dictate how you want to display and organize media. Go onto the [next section](#how-to-setup) for a basic setup.
 
 </details>
 
-#### How to Setup
+<details markdown="1" id="how-to-setup">
+<summary><strong>How to Setup</strong></summary>
 
 TODO basic user setup with public domain media?<br>
 TODO link to advanced section at the end to go over (1) advanced setup and (2) advanced configuration?<br>
 
-#### Video Players
+</details>
+
+<details open markdown="1" id="video-players">
+<summary><strong>Video Players</strong></summary>
 
 This list is a ranking of the preferred player and its features
 1. [Infuse](https://firecore.com/infuse)
@@ -57,7 +57,10 @@ This list is a ranking of the preferred player and its features
     - Very limited support for video files
     - Works well with addons that provide live tv
 
-#### Catalogs
+</details>
+
+<details open markdown="1" id="catalogs">
+<summary><strong>Catalogs</strong></summary>
 
 Provides a list of watchable content within Omni. There are 4 ways to display this content in the Omni App.
 1. **Star** a catalog for it to appear in the hero section of the Omni app.
@@ -69,13 +72,15 @@ TODO screenshots of each way catalogs appear<br>
 TODO screenshots of how to do each state<br>
 TODO list of addons that provide catalog information<br>
 
+</details>
+
 ### **Advanced**
 
 Advanced setup features for power users.<br>
 TODO list out all the "advanced" features
 
 <details markdown="1" id="groups">
-<summary><b>Groups</b></summary>
+<summary><strong>Groups</strong></summary>
 
 There are 3 key things to understand with the "Groups" feature. (1) There are "Main Catalog Groups" and "Catalog Groups". Main Catalog Groups consist of Catalog Groups. Catalog Groups consist of catalogs. Catalogs are lists of content provided from addons. (2) When you create a main catalog group, it will add a "Shelf" to the Omni home screen. For every main catalog group, there will be a shelf with that title. (3) Ultimately, catalog groups are catalogs provided from addons so you must have addons that provide catalogs to use the feature.
 
@@ -88,7 +93,7 @@ Here is an example of a shelf that consist of streaming services. Let's create o
 </details>
 
 <details markdown="1">
-<summary><b>Regex</b></summary>
+<summary><strong>Regex</strong></summary>
 
 TODO describe how this is useful<br>
 TODO examples of regex filters<br>
@@ -121,3 +126,29 @@ Need assistance? Join the [Omni Discord](https://discord.gg/YeWQuQSg8k) for disc
 #### **Reddit**
 
 Ask questions on Reddit. Share your setups on Reddit. Discuss anything about Omni -- Content Hub on Reddit here: https://www.reddit.com/r/OmniContentHub/
+
+<script>
+// Function to open details element when its ID is targeted in the URL
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the hash from the URL (without the # symbol)
+  const hash = window.location.hash.substring(1);
+  
+  // If there's a hash and it matches an element ID
+  if (hash) {
+    // Find the details element with that ID
+    const targetDetails = document.getElementById(hash);
+    
+    // If it's a details element, open it
+    if (targetDetails && targetDetails.tagName.toLowerCase() === 'details') {
+      targetDetails.setAttribute('open', 'true');
+    }
+    // If it's inside a details element, find and open the parent details
+    else {
+      const parentDetails = targetDetails?.closest('details');
+      if (parentDetails) {
+        parentDetails.setAttribute('open', 'true');
+      }
+    }
+  }
+});
+</script>
