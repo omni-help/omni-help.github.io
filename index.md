@@ -13,7 +13,7 @@ Let's get started and walkthrough the first steps to take.
 TODO somewhere we should talk about the sidebar
 TODO somewhere we should talk about the settings tab and what's in it
 
-<details open>
+<details open markdown="1">
 <summary>
 
 #### How to Install
