@@ -8,13 +8,21 @@ Walkthrough of how to setup your new Omni app on Apple TV. If you have not purch
 4. [Catalogs](#catalogs)
 
 ### **Getting Started**
-Let's get started and walkthrough the first steps to take.<br>
-TODO somewhere we should talk about the sidebar<br>
-TODO somewhere we should talk about the settings tab and what's in it <br>
+
+Let's get started and walkthrough the first steps to take.
+TODO somewhere we should talk about the sidebar
+TODO somewhere we should talk about the settings tab and what's in it
+
+<details open>
+<summary>
 
 #### How to Install
 
+</summary>
+
 Installing the app should be very easy. Once you make the purchase on the app store, you install it like any other app from the app store. However, without addons, Omni does not offer much functionality. To unleash the power of the app you need to configure addons that dictate how you want to display and organize media. Go onto the [next section](#how-to-setup) for a basic setup.
+
+</details>
 
 #### How to Setup
 
