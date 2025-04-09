@@ -34,8 +34,8 @@ Now let's start with a basic setup to get you started. First thing to know is th
 6. Omni now has the addon installed and will use it.
 
 After understanding the steps to get an addon added to Omni, let's start with an addon that provides metadata for content. Two good options are:
-* Cinemeta  - https://v3-cinemeta.strem.io/
-* TMDB      - https://tmdb.elfhosted.com/
+* Cinemeta  - [https://v3-cinemeta.strem.io/](https://v3-cinemeta.strem.io/)
+* TMDB      - [https://tmdb.elfhosted.com/](https://tmdb.elfhosted.com/)
 
 Next to get up and started with watching content in Omni we need to have an addon that provides video content.
 
