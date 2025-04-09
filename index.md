@@ -1,3 +1,8 @@
+<head>
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
+</head>
+
 # Omni Setup
 Walkthrough of how to setup your new Omni app on Apple TV. If you have not purchased the app, please purchase from the [Apple app store](https://apple.co/42eawJ9).
 
@@ -8,20 +13,47 @@ Walkthrough of how to setup your new Omni app on Apple TV. If you have not purch
 4. [Catalogs](#catalogs)
 
 ### **Getting Started**
-Let's get started and walkthrough the first steps to take.<br>
-TODO somewhere we should talk about the sidebar<br>
-TODO somewhere we should talk about the settings tab and what's in it <br>
 
-#### How to Install
+Let's get started and walkthrough the first steps to take.
+
+<details markdown="1" id="how-to-install">
+<summary><strong>How to Install</strong></summary>
 
 Installing the app should be very easy. Once you make the purchase on the app store, you install it like any other app from the app store. However, without addons, Omni does not offer much functionality. To unleash the power of the app you need to configure addons that dictate how you want to display and organize media. Go onto the [next section](#how-to-setup) for a basic setup.
 
-#### How to Setup
+</details>
 
-TODO basic user setup with public domain media?<br>
-TODO link to advanced section at the end to go over (1) advanced setup and (2) advanced configuration?<br>
+<details markdown="1" id="how-to-setup">
+<summary><strong>How to Setup</strong></summary>
 
-#### Video Players
+TODO needs improvement
+#### **Addons**
+Omni provides compatability with Stremio addons. Not every Stremio addon is compatible with Omni. Browse the official Stremio addon site to see what's available. 
+
+Now let's start with a basic setup to get you started. First thing to know is that there are 2 ways to add addons to Omni. (1) You can add addons from the settings panel through the addons tab - this will add 1 addon at a time. (2) You can add addons from a web browser after starting the local webserver from the Omni app - this allows you to add multiple addons at a time.
+1. Open the Omni app and go to the settings tab.
+2. Click the addons tab.
+3. In the input field, type the addon you want to add.
+4. Click the plus button next to the input field.
+5. The addon will be added to the list of addons.
+6. Omni now has the addon installed and will use it.
+
+After understanding the steps to get an addon added to Omni, let's start with an addon that provides metadata for content. Two good options are:
+* Cinemeta  - [https://v3-cinemeta.strem.io/](https://v3-cinemeta.strem.io/)
+* TMDB      - [https://tmdb.elfhosted.com/](https://tmdb.elfhosted.com/)
+
+You'll want to configure the addon and then when you get the install link, make sure it starts with `https://` or `stremio://` - once you have the install link, use that link to add the addon to Omni.
+
+Next to get up and started with watching content in Omni we need to have an addon that provides video content.
+
+##### **Transfer Existing Addons**
+
+If you have existing addons that you want to transfer to Omni, you can do so by getting the configuration link from Stremio's addons settings tab. If you're using Stremio addons with a different app, you'll have to consult the app to see how you can get the configuration link from the app.
+
+</details>
+
+<details markdown="1" id="video-players">
+<summary><strong>Video Players</strong></summary>
 
 This list is a ranking of the preferred player and its features
 1. [Infuse](https://firecore.com/infuse)
@@ -49,25 +81,25 @@ This list is a ranking of the preferred player and its features
     - Very limited support for video files
     - Works well with addons that provide live tv
 
-#### Catalogs
+</details>
 
-Provides a list of watchable content within Omni. There are 4 ways to display this content in the Omni App.
-1. **Star** a catalog for it to appear in the hero section of the Omni app.
-2. **Pin** a catalog for it to appear in the sidebar.
-3. **Enable** the catalog to appear on the home screen (separate from the hero section).
-4. **Create** a ["group"](#groups) that will add multiple catalogs to a shelf on the home screen.
+<details markdown="1" id="catalogs">
+<summary><strong>Catalogs</strong></summary>
 
-TODO screenshots of each way catalogs appear<br>
-TODO screenshots of how to do each state<br>
-TODO list of addons that provide catalog information<br>
+Catalogs provide a list of watchable content within Omni. There are 4 ways to display this content in the Omni App.
+1. ⭐️ **Star** a catalog for it to appear in the hero section of the Omni app.
+2. 📍 **Pin** a catalog for it to appear in the sidebar.
+3. ✅ **Enable** the catalog to appear on the home screen (separate from the hero section).
+4. 📂 **Create** a ["group"](#groups) that will add multiple catalogs to a shelf on the home screen.
+
+</details>
 
 ### **Advanced**
 
-Advanced setup features for power users.<br>
-TODO list out all the "advanced" features
+Advanced setup features for power users.
 
 <details markdown="1" id="groups">
-<summary><b>Groups</b></summary>
+<summary><strong>Groups</strong></summary>
 
 There are 3 key things to understand with the "Groups" feature. (1) There are "Main Catalog Groups" and "Catalog Groups". Main Catalog Groups consist of Catalog Groups. Catalog Groups consist of catalogs. Catalogs are lists of content provided from addons. (2) When you create a main catalog group, it will add a "Shelf" to the Omni home screen. For every main catalog group, there will be a shelf with that title. (3) Ultimately, catalog groups are catalogs provided from addons so you must have addons that provide catalogs to use the feature.
 
@@ -80,11 +112,9 @@ Here is an example of a shelf that consist of streaming services. Let's create o
 </details>
 
 <details markdown="1">
-<summary><b>Regex</b></summary>
+<summary><strong>Regex</strong></summary>
 
-TODO describe how this is useful<br>
-TODO examples of regex filters<br>
-TODO screenshots
+TODO needs improvement
 
 </details>
 
@@ -96,7 +126,7 @@ Communities you can join to discuss the app.
 
 Need assistance? Join the [Omni Discord](https://discord.gg/YeWQuQSg8k) for discussion and conversation. Use bot command tags to get help. Go to #bot-cmds and type the command, e.g. `!t addons` for the bot to give a list of recommended addons.
 
-<details markdown="1">
+<details markdown="1" id="discord-tags">
 <summary><i>Discord Bot Command Tags</i></summary>
 
 - addons (`!t addons`)
@@ -112,4 +142,57 @@ Need assistance? Join the [Omni Discord](https://discord.gg/YeWQuQSg8k) for disc
 
 #### **Reddit**
 
-Ask questions on Reddit. Share your setups on Reddit. Discuss anything about Omni -- Content Hub on Reddit here: https://www.reddit.com/r/OmniContentHub/
+Ask questions on Reddit. Share your setups on Reddit. Discuss anything about [Omni - Content Hub on Reddit](https://www.reddit.com/r/OmniContentHub/).
+
+<details markdown="1" id="todos">
+<summary><strong>List of TODOs for this page</strong></summary>
+
+- [ ] Add screenshots
+- [ ] somewhere we should talk about the sidebar and what's in it
+- [ ] somewhere we should talk about the settings tab and what's in it
+- [ ] basic user setup with public domain media?
+- [ ] link to advanced section at the end to go over (1) advanced setup and (2) advanced configuration?
+- [ ] link to addons section to go over what addons are and what they do
+- [ ] screenshots of each way catalogs appear on the home screen
+- [ ] list of addons that provide catalog information
+- [ ] list out all the "advanced" features
+- [ ] regex section
+- [ ] settings section
+
+</details>
+
+<script>
+// Function to open details element when its ID is targeted in the URL
+function openTargetedDetails() {
+  // Get the hash from the URL (without the # symbol)
+  const hash = window.location.hash.substring(1);
+  
+  // If there's a hash and it matches an element ID
+  if (hash) {
+    // Find the element with that ID
+    const targetElement = document.getElementById(hash);
+    
+    if (targetElement) {
+      // If it's a details element, open it
+      if (targetElement.tagName.toLowerCase() === 'details') {
+        targetElement.setAttribute('open', 'true');
+      }
+      // If it's inside a details element, find and open the parent details
+      else {
+        const parentDetails = targetElement.closest('details');
+        if (parentDetails) {
+          parentDetails.setAttribute('open', 'true');
+          // Ensure the element is visible by scrolling to it
+          targetElement.scrollIntoView();
+        }
+      }
+    }
+  }
+}
+
+// Run when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', openTargetedDetails);
+
+// Also run when the hash changes (user clicks an anchor link)
+window.addEventListener('hashchange', openTargetedDetails);
+</script>
