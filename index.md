@@ -1,3 +1,8 @@
+<head>
+<link rel="stylesheet" href="theme.css">
+<script src="theme.js"></script>
+</head>
+
 # Omni Setup
 Walkthrough of how to setup your new Omni app on Apple TV. If you have not purchased the app, please purchase from the [Apple app store](https://apple.co/42eawJ9).
 
