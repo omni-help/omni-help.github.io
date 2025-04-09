@@ -11,7 +11,7 @@ Walkthrough of how to setup your new Omni app on Apple TV. If you have not purch
 
 Let's get started and walkthrough the first steps to take.
 
-<details open markdown="1" id="how-to-install">
+<details markdown="1" id="how-to-install">
 <summary><strong>How to Install</strong></summary>
 
 Installing the app should be very easy. Once you make the purchase on the app store, you install it like any other app from the app store. However, without addons, Omni does not offer much functionality. To unleash the power of the app you need to configure addons that dictate how you want to display and organize media. Go onto the [next section](#how-to-setup) for a basic setup.
@@ -22,7 +22,7 @@ Installing the app should be very easy. Once you make the purchase on the app st
 <summary><strong>How to Setup</strong></summary>
 
 TODO needs improvement
-#### Addons
+#### **Addons**
 Omni provides compatability with Stremio addons. Not every Stremio addon is compatible with Omni. Browse the official Stremio addon site to see what's available. 
 
 Now let's start with a basic setup to get you started. First thing to know is that there are 2 ways to add addons to Omni. (1) You can add addons from the settings panel through the addons tab - this will add 1 addon at a time. (2) You can add addons from a web browser after starting the local webserver from the Omni app - this allows you to add multiple addons at a time.
@@ -37,11 +37,17 @@ After understanding the steps to get an addon added to Omni, let's start with an
 * Cinemeta  - [https://v3-cinemeta.strem.io/](https://v3-cinemeta.strem.io/)
 * TMDB      - [https://tmdb.elfhosted.com/](https://tmdb.elfhosted.com/)
 
+You'll want to configure the addon and then when you get the install link, make sure it starts with `https://` or `stremio://` - once you have the install link, use that link to add the addon to Omni.
+
 Next to get up and started with watching content in Omni we need to have an addon that provides video content.
+
+##### **Transfer Existing Addons**
+
+If you have existing addons that you want to transfer to Omni, you can do so by getting the configuration link from Stremio's addons settings tab. If you're using Stremio addons with a different app, you'll have to consult the app to see how you can get the configuration link from the app.
 
 </details>
 
-<details open markdown="1" id="video-players">
+<details markdown="1" id="video-players">
 <summary><strong>Video Players</strong></summary>
 
 This list is a ranking of the preferred player and its features
@@ -72,7 +78,7 @@ This list is a ranking of the preferred player and its features
 
 </details>
 
-<details open markdown="1" id="catalogs">
+<details markdown="1" id="catalogs">
 <summary><strong>Catalogs</strong></summary>
 
 Provides a list of watchable content within Omni. There are 4 ways to display this content in the Omni App.
@@ -115,7 +121,7 @@ Communities you can join to discuss the app.
 
 Need assistance? Join the [Omni Discord](https://discord.gg/YeWQuQSg8k) for discussion and conversation. Use bot command tags to get help. Go to #bot-cmds and type the command, e.g. `!t addons` for the bot to give a list of recommended addons.
 
-<details markdown="1">
+<details markdown="1" id="discord-tags">
 <summary><i>Discord Bot Command Tags</i></summary>
 
 - addons (`!t addons`)
@@ -133,8 +139,9 @@ Need assistance? Join the [Omni Discord](https://discord.gg/YeWQuQSg8k) for disc
 
 Ask questions on Reddit. Share your setups on Reddit. Discuss anything about [Omni - Content Hub on Reddit](https://www.reddit.com/r/OmniContentHub/).
 
+<details markdown="1" id="todos">
+<summary><strong>List of TODOs for this page</strong></summary>
 
-##### List of TODOs for this page
 - [ ] Add screenshots
 - [ ] somewhere we should talk about the sidebar and what's in it
 - [ ] somewhere we should talk about the settings tab and what's in it
@@ -146,6 +153,8 @@ Ask questions on Reddit. Share your setups on Reddit. Discuss anything about [Om
 - [ ] list out all the "advanced" features
 - [ ] regex section
 - [ ] settings section
+
+</details>
 
 <script>
 // Function to open details element when its ID is targeted in the URL
