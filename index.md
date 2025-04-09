@@ -81,11 +81,11 @@ This list is a ranking of the preferred player and its features
 <details markdown="1" id="catalogs">
 <summary><strong>Catalogs</strong></summary>
 
-Provides a list of watchable content within Omni. There are 4 ways to display this content in the Omni App.
-1. **Star** a catalog for it to appear in the hero section of the Omni app.
-2. **Pin** a catalog for it to appear in the sidebar.
-3. **Enable** the catalog to appear on the home screen (separate from the hero section).
-4. **Create** a ["group"](#groups) that will add multiple catalogs to a shelf on the home screen.
+Catalogs provide a list of watchable content within Omni. There are 4 ways to display this content in the Omni App.
+1. ⭐️ **Star** a catalog for it to appear in the hero section of the Omni app.
+2. 📍 **Pin** a catalog for it to appear in the sidebar.
+3. ✅ **Enable** the catalog to appear on the home screen (separate from the hero section).
+4. 📂 **Create** a ["group"](#groups) that will add multiple catalogs to a shelf on the home screen.
 
 </details>
 
