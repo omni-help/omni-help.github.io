@@ -1,32 +1,4 @@
 <head>
-<!-- Prevent flash of incorrect theme with critical CSS -->
-<style id="critical-theme-css">
-  /* Hide content until theme is applied */
-  html { visibility: hidden; }
-</style>
-<script>
-  // Inline theme preload script - runs immediately before any rendering
-  (function () {
-    // Get saved preference or default to system
-    const savedTheme = localStorage.getItem('theme-preference') || 'system';
-    
-    // Apply theme immediately
-    if (savedTheme === 'system') {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-    } else {
-      // Apply saved theme
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    }
-    
-    // Make content visible once theme is applied
-    // Remove the critical CSS immediately instead of waiting for DOMContentLoaded
-    document.getElementById('critical-theme-css').remove();
-    // Fallback in case the style removal doesn't work
-    document.querySelector('html').style.visibility = 'visible';
-  })();
-</script>
 <link rel="stylesheet" href="theme.css">
 <script src="theme.js"></script>
 </head>
