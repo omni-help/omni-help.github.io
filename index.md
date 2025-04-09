@@ -22,6 +22,22 @@ Installing the app should be very easy. Once you make the purchase on the app st
 <summary><strong>How to Setup</strong></summary>
 
 TODO needs improvement
+#### Addons
+Omni provides compatability with Stremio addons. Not every Stremio addon is compatible with Omni. Browse the official Stremio addon site to see what's available. 
+
+Now let's start with a basic setup to get you started. First thing to know is that there are 2 ways to add addons to Omni. (1) You can add addons from the settings panel through the addons tab - this will add 1 addon at a time. (2) You can add addons from a web browser after starting the local webserver from the Omni app - this allows you to add multiple addons at a time.
+1. Open the Omni app and go to the settings tab.
+2. Click the addons tab.
+3. In the input field, type the addon you want to add.
+4. Click the plus button next to the input field.
+5. The addon will be added to the list of addons.
+6. Omni now has the addon installed and will use it.
+
+After understanding the steps to get an addon added to Omni, let's start with an addon that provides metadata for content. Two good options are:
+* Cinemeta  - https://v3-cinemeta.strem.io/
+* TMDB      - https://tmdb.elfhosted.com/
+
+Next to get up and started with watching content in Omni we need to have an addon that provides video content.
 
 </details>
 
