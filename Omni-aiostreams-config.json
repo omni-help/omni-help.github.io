@@ -340,6 +340,38 @@
     "proxiedAddons": [],
     "proxiedServices": []
   },
+  "excludeUncachedFromAddons": [],
+  "excludeUncachedFromServices": [],
+  "excludeUncachedFromStreamTypes": [],
+  "excludeCachedFromAddons": [],
+  "excludeCachedFromServices": [],
+  "excludeCachedFromStreamTypes": [],
+  "preferredEncodes": [
+    "AV1",
+    "HEVC",
+    "AVC",
+    "Unknown"
+  ],
+  "preferredStreamTypes": [
+    "usenet",
+    "debrid",
+    "p2p",
+    "http",
+    "live"
+  ],
+  "preferredVisualTags": [
+    "HDR+DV",
+    "HDR10+",
+    "HDR10",
+    "DV",
+    "HDR",
+    "10bit",
+    "IMAX",
+    "AI",
+    "SDR",
+    "Unknown"
+  ],
+  "preferredAudioTags": [],
   "hideErrorsForResources": [],
   "precacheNextEpisode": true,
   "alwaysPrecache": true,
@@ -356,22 +388,9 @@
   "preferredLanguages": [],
   "includedVisualTags": [],
   "requiredVisualTags": [],
-  "preferredVisualTags": [
-    "HDR+DV",
-    "HDR10+",
-    "HDR10",
-    "DV",
-    "HDR",
-    "10bit",
-    "IMAX",
-    "AI",
-    "SDR",
-    "Unknown"
-  ],
   "excludedAudioTags": [],
   "includedAudioTags": [],
   "requiredAudioTags": [],
-  "preferredAudioTags": [],
   "excludedAudioChannels": [],
   "includedAudioChannels": [],
   "requiredAudioChannels": [],
@@ -379,22 +398,9 @@
   "excludedStreamTypes": [],
   "includedStreamTypes": [],
   "requiredStreamTypes": [],
-  "preferredStreamTypes": [
-    "usenet",
-    "debrid",
-    "p2p",
-    "http",
-    "live"
-  ],
   "excludedEncodes": [],
   "includedEncodes": [],
   "requiredEncodes": [],
-  "preferredEncodes": [
-    "AV1",
-    "HEVC",
-    "AVC",
-    "Unknown"
-  ],
   "excludedRegexPatterns": [],
   "preferredRegexPatterns": [
     {
@@ -548,18 +554,12 @@
     1000
   ],
   "seederRangeTypes": [],
-  "excludeCachedFromAddons": [],
-  "excludeCachedFromServices": [],
-  "excludeCachedFromStreamTypes": [],
   "excludeUncached": false,
-  "excludeUncachedFromAddons": [],
-  "excludeUncachedFromServices": [],
-  "excludeUncachedFromStreamTypes": [],
   "excludeUncachedMode": "or",
   "excludedStreamExpressions": [
-    "count(type(streams, 'debrid', 'usenet')) > 0?  ( count(cached(streams)) < 5 or count(type(streams, 'debrid','usenet','http')) < 5 ? [] :  merge( count(regexMatched(streams)) > 0 ? seeders(regexMatched(merge(negate(uncached(type(streams, 'usenet')),uncached(streams)), type(streams, 'p2p')), '', 'Bad'), 0,50): seeders(merge(negate(uncached(type(streams, 'usenet')),uncached(streams)), type(streams, 'p2p')), 0,50),  count(resolution(cached(streams), '2160p','1440p','1080p')) > 10 ?       negate(         addon(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 'Debridio TV'),         resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown')       ) :  count(resolution(cached(streams), '2160p','1440p','1080p')) > 5 ?     slice(       negate(         addon(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 'Debridio TV'),         resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown')       ), 5) :   count(resolution(cached(streams), '2160p','1440p','1080p')) > 5 ?     slice(       negate(         addon(resolution(streams, '2160p','1440p','1080p','720p'), 'Debridio TV'),         resolution(streams, '576p','480p','360p','240p','144p','Unknown')       ), 5) :   []    ) ): ( count(streams) < 5 or count(type(streams, 'p2p','http')) < 5 ? [] :  merge(  count(resolution(streams, '2160p','1440p','1080p')) > 10 ?       negate(         addon(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 'Debridio TV'),         resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown')       ) :  count(resolution(streams, '2160p','1440p','1080p')) > 5 ?     slice(       negate(         addon(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 'Debridio TV'),         resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown')       ), 5) :   count(resolution(streams, '2160p','1440p','1080p')) > 5 ?     slice(       negate(         addon(resolution(streams, '2160p','1440p','1080p','720p'), 'Debridio TV'),         resolution(streams, '576p','480p','360p','240p','144p','Unknown')       ), 5) :    []    ) )",
-    "merge(   count(resolution(quality(streams,'Bluray REMUX'),'2160p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Bluray REMUX'),'2160p'), 'Debridio TV'), resolution(quality(streams,'Bluray REMUX'),'2160p')), 3) : [],   count(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p'), 'Debridio TV'), resolution(quality(streams,'Bluray REMUX'),'1440p','1080p')), 3) : [],   count(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown'), 'Debridio TV'), resolution(quality(streams,'Bluray REMUX'),'720p','Unknown')), 3) : [],   count(resolution(quality(streams,'Bluray'),'2160p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Bluray'),'2160p'), 'Debridio TV'), resolution(quality(streams,'Bluray'),'2160p')), 3) : [],   count(resolution(quality(streams,'Bluray'),'1440p','1080p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Bluray'),'1440p','1080p'), 'Debridio TV'), resolution(quality(streams,'Bluray'),'1440p','1080p')), 3) : [],   count(resolution(quality(streams,'Bluray'),'720p','Unknown')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Bluray'),'720p','Unknown'), 'Debridio TV'), resolution(quality(streams,'Bluray'),'720p','Unknown')), 3) : [],   count(resolution(quality(streams,'WEB-DL'),'2160p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'WEB-DL'),'2160p'), 'Debridio TV'), resolution(quality(streams,'WEB-DL'),'2160p')), 3) : [],   count(resolution(quality(streams,'WEB-DL'),'1440p','1080p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'WEB-DL'),'1440p','1080p'), 'Debridio TV'), resolution(quality(streams,'WEB-DL'),'1440p','1080p')), 3) : [],   count(resolution(quality(streams,'WEB-DL'),'720p','Unknown')) > 3 ?     slice(negate(addon(resolution(quality(streams,'WEB-DL'),'720p','Unknown'), 'Debridio TV'), resolution(quality(streams,'WEB-DL'),'720p','Unknown')), 3) : [] )",
-    "merge(   count(resolution(quality(streams,'WEBRip'),'2160p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'WEBRip'),'2160p'), 'Debridio TV'), resolution(quality(streams,'WEBRip'),'2160p')), 3) : [],   count(resolution(quality(streams,'WEBRip'),'1440p','1080p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'WEBRip'),'1440p','1080p'), 'Debridio TV'), resolution(quality(streams,'WEBRip'),'1440p','1080p')), 3) : [],   count(resolution(quality(streams,'WEBRip'),'720p','Unknown')) > 3 ?     slice(negate(addon(resolution(quality(streams,'WEBRip'),'720p','Unknown'), 'Debridio TV'), resolution(quality(streams,'WEBRip'),'720p','Unknown')), 3) : [],   count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p'), 'Debridio TV'), resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p')), 3) : [],   count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown')) > 3 ?     slice(negate(addon(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown'), 'Debridio TV'), resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown')), 3) : [],   count(resolution(quality(streams,'Unknown'),'2160p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Unknown'),'2160p'), 'Debridio TV'), resolution(quality(streams,'Unknown'),'2160p')), 3) : [],   count(resolution(quality(streams,'Unknown'),'1440p','1080p')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Unknown'),'1440p','1080p'), 'Debridio TV'), resolution(quality(streams,'Unknown'),'1440p','1080p')), 3) : [],   count(resolution(quality(streams,'Unknown'),'720p','Unknown')) > 3 ?     slice(negate(addon(resolution(quality(streams,'Unknown'),'720p','Unknown'), 'Debridio TV'), resolution(quality(streams,'Unknown'),'720p','Unknown')), 3) : [],   count(negate(quality(streams,'CAM','Unknown'), quality(streams,'Bluray REMUX','Bluray','WEB-DL','WEBRip','HDRip','HC HD-Rip','DVDRip','HDTV','Unknown'))) > 0 ?     quality(streams,'CAM','TS','TC','SCR') : [] )"
+    "count(type(streams, 'debrid', 'usenet')) > 0?  ( count(type(cached(streams), 'debrid','usenet')) < 5 ? [] :  merge( count(regexMatched(streams)) > 0 ? seeders(merge(regexMatched(negate(uncached(type(streams, 'usenet')),uncached(streams)), '', 'Bad'), type(streams, 'p2p')), 0,10):seeders(merge(negate(uncached(type(streams, 'usenet')),uncached(streams)), type(streams, 'p2p')), 0,10),  count(resolution(cached(streams), '2160p','1440p')) > 10 ? resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown') :  count(resolution(cached(streams), '2160p','1440p','1080p')) > 10 ? slice(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 10) :   count(resolution(cached(streams), '2160p','1440p','1080p','720p')) > 10 ? slice(resolution(streams, '576p','480p','360p','240p','144p','Unknown'), 10) :   []    ) ): ( count(type(streams, 'p2p','http')) < 5 ? [] :  merge(count(seeders(type(streams, 'p2p'), 10))> 0? seeders(type(streams, 'p2p'), 0,10):[],  count(resolution(streams, '2160p','1440p')) > 10 ? resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown') :  count(resolution(streams, '2160p','1440p','1080p')) > 10 ? slice(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 10) :   count(resolution(streams, '2160p','1440p','1080p','720p')) > 10 ? slice(resolution(streams, '576p','480p','360p','240p','144p','Unknown'), 10) :   []    ) )",
+    "merge(   count(resolution(quality(streams,'Bluray REMUX'),'2160p')) > 3 ? slice(resolution(quality(streams,'Bluray REMUX'),'2160p'), 3) : [],  count(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p'), 3) : [],  count(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown')) > 3 ? slice(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown'), 3) : [],  count(resolution(quality(streams,'Bluray'),'2160p')) > 3 ? slice(resolution(quality(streams,'Bluray'),'2160p'), 3) : [],  count(resolution(quality(streams,'Bluray'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'Bluray'),'1440p','1080p'), 3) : [],  count(resolution(quality(streams,'Bluray'),'720p','Unknown')) > 3 ? slice(resolution(quality(streams,'Bluray'),'720p','Unknown'), 3) : [],  count(resolution(quality(streams,'WEB-DL'),'2160p')) > 3 ? slice(resolution(quality(streams,'WEB-DL'),'2160p'), 3) : [],  count(resolution(quality(streams,'WEB-DL'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'WEB-DL'),'1440p','1080p'), 3) : [],  count(resolution(quality(streams,'WEB-DL'),'720p','Unknown')) > 3 ? slice(resolution(quality(streams,'WEB-DL'),'720p','Unknown'), 3) : [] )",
+    "merge( count(resolution(quality(streams,'WEBRip'),'2160p')) > 3 ? slice(resolution(quality(streams,'WEBRip'),'2160p'), 3) : [],  count(resolution(quality(streams,'WEBRip'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'WEBRip'),'1440p','1080p'), 3) : [],  count(resolution(quality(streams,'WEBRip'),'720p','Unknown')) > 3 ?  slice(resolution(quality(streams,'WEBRip'),'720p','Unknown'), 3) : [],  count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p')) > 3 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p'), 3) : [],  count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown')) > 3 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown'), 3) : [],  count(resolution(quality(streams,'Unknown'),'2160p')) > 3 ? slice(resolution(quality(streams,'Unknown'),'2160p'), 3) : [],  count(resolution(quality(streams,'Unknown'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'Unknown'),'1440p','1080p'), 3) : [],  count(resolution(quality(streams,'Unknown'),'720p','Unknown')) > 3 ? slice(resolution(quality(streams,'Unknown'),'720p','Unknown'), 3) : [],  count(quality(streams,'Bluray REMUX','Bluray','WEB-DL','WEBRip','HDRip','HC HD-Rip','DVDRip','HDTV')) > 0 ? quality(streams,'CAM','TS','TC','SCR') : [] )"
   ],
   "requiredStreamExpressions": [],
   "includedStreamExpressions": [],
